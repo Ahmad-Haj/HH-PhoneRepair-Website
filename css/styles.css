@@ -1,0 +1,78 @@
+/* General Reset */
+* {
+    margin: o;
+    padding: o;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Header Section */
+header {
+    background-color:#2C3E50;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+header .lgo img {
+    width: 100px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: #18BC9C;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+}
+
+.cta-btn {
+    background-color: #18BC9C;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.cta-btn:hover {
+    background-color: #16a085;
+}
+
+/* Footer */
+footer {
+    background-color: #2C3E50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
