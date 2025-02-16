@@ -97,20 +97,7 @@
             </form>
         </div>
     </section>
-         <!-- Ensure the form submits via JS -->
-<script>
-        document.getElementById("submit-button").addEventListener("click", function() {
-        // Store the device and issue value in sessionstorage
-        const device = document.getElementById("device").value;
-        const issue = document.getElementById("issue").value;
-    
-        sessionStorage.setItem("device", device);  // Store device
-        sessionStorage.setItem("issue", issue);    // Store issue
-    
-        // Redirect to the quote page
-        window.location.href = "quote.html";
-        });
-  </script>
+
     <footer>
         <p>&copy; 2025 HH Phone Repairs. All rights reserved.</p>
     </footer>
