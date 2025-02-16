@@ -42,12 +42,12 @@
             <label for="phone">Phone Number</label>
             <input type="tel" id="phone" name="phone" required>
 
-            <!-- Device model and issue will be pre-filled from previous page hardcoed -->
+            <!-- Device model and issue will be pre-filled from previous page -->
             <label for="device">Device</label>
-            <input type="text" id="device" name="device" value="iPhone 12" readonly>
+            <input type="text" id="device" name="device" readonly>
 
             <label for="issue">Issue</label>
-            <input type="text" id="issue" name="issue" value="Cracked screen" readonly>
+            <input type="text" id="issue" name="issue" readonly>
 
             <label for="additional-info">Additional Information</label>
             <textarea id="additional-info" name="additional-info" rows="4" placeholder="Provide any additional details..."></textarea>
@@ -56,11 +56,28 @@
         </form>
     </section>
 
-    
+    <script>
+        // Ensure the script runs once the page is loaded
+        document.addEventListener("DOMContentLoaded", function() {
+          // Retrieve the stored values from sessionStorage
+          const device = sessionStorage.getItem("device");
+          const issue = sessionStorage.getItem("issue");
+      
+          // Pre-fill the input fields with the saved data
+          if (device && issue) {
+            document.getElementById("device").value = device;  // Set the device model
+            document.getElementById("issue").value = issue;    // Set the issue description
+          } else {
+            alert("No data available. Please go back to the Services page and select a device.");
+          }
+        });
+      </script>
+      
 
     
     <footer>
         <p>&copy; 2025 HH Phone Repairs. All rights reserved.</p>
     </footer>
+    <script src="js/scripts.js"></script>
 </body>
 </html>

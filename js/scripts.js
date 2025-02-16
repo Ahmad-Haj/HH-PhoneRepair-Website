@@ -1,11 +1,36 @@
 document.addEventListener("DOMContentLoaded", function() {
-    alert("Welcome to HH Phone Repairs!");
-});
-// Get the URL parameters
-const urlParams = new URLSearchParams(window.location.search);
-const device = urlParams.get('device');
-const issue = urlParams.get('issue');
+    // Get the submit button for the form
+    const submitButton = document.getElementById("submit-button");
 
-// Now use these parameters to populate the form or display them
-document.getElementById('deviceModel').innerText = device; // e.g., display device type
-document.getElementById('issueDescription').innerText = issue; // e.g., display the issue
+    // When the user clicks the button, store the selected device and issue in sessionStorage
+    submitButton.addEventListener("click", function(event) {
+        event.preventDefault();  // Prevent default form submission behavior
+
+        // Capture the device and issue values
+        const device = document.getElementById("device").value;
+        const issue = document.getElementById("issue").value;
+
+        // Store the values in sessionStorage
+        sessionStorage.setItem("device", device);
+        sessionStorage.setItem("issue", issue);
+
+        // Redirect to the quote page
+        window.location.href = "quote.html";
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Retrieve the stored device and issue values from sessionStorage
+    const device = sessionStorage.getItem("device");
+    const issue = sessionStorage.getItem("issue");
+
+    // If the data exists, populate the form fields with the values
+    if (device && issue) {
+        document.getElementById("device").value = device;  // Populate the device model field
+        document.getElementById("issue").value = issue;    // Populate the issue description field
+    } else {
+        // If no data is found, show an alert or handle the missing data scenario
+        alert("No data found. Please go back to the services page.");
+    }
+});
+
