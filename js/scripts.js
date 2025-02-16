@@ -1,20 +1,32 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Get the submit button for the quote request
-    const submitButton = document.getElementById("submit-button");
-
-    // Event listener for the button click
-    submitButton.addEventListener("click", function() {
-        // Get the selected device and issue values
-        const device = document.getElementById("device").value;
-        const issue = document.getElementById("issue").value;
-
+    // For iPhone Repair Button
+    const iphoneButton = document.getElementById("iphone-submit");
+    iphoneButton.addEventListener("click", function() {
+        const device = document.getElementById("phone-model").value; // Get iPhone model
+        const issue = document.getElementById("iphone-issue").value; // Get issue for iPhone
+        
         // Construct the URL with query parameters for device and issue
         const quoteUrl = `quote.html?device=${encodeURIComponent(device)}&issue=${encodeURIComponent(issue)}`;
+        
+        // Redirect to the quote page with query parameters
+        window.location.href = quoteUrl;
+    });
 
-        // Redirect to quote.html with the selected values in the URL
+    // For Android Repair Button
+    const androidButton = document.getElementById("android-submit");
+    androidButton.addEventListener("click", function() {
+        const device = document.getElementById("android-model").value; // Get Android model
+        const issue = document.getElementById("android-issue").value; // Get issue for Android
+        
+        // Construct the URL with query parameters for device and issue
+        const quoteUrl = `quote.html?device=${encodeURIComponent(device)}&issue=${encodeURIComponent(issue)}`;
+        
+        // Redirect to the quote page with query parameters
         window.location.href = quoteUrl;
     });
 });
+
+// scripts.js
 
 document.addEventListener("DOMContentLoaded", function() {
     // Retrieve the URL parameters (device and issue)
@@ -25,8 +37,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // If both device and issue are available, populate the form fields
     if (device && issue) {
-        document.getElementById("device").value = device;  // Set the device model field
-        document.getElementById("issue").value = issue;    // Set the issue description field
+        document.getElementById("device").value = device;  // Set the device field
+        document.getElementById("issue").value = issue;    // Set the issue field
     } else {
         alert("No device or issue information found. Please go back to the services page.");
     }
