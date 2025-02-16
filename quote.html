@@ -26,6 +26,36 @@
         </nav>
     </header>
 
+
+    <section id="quote">
+        <h2>Get Your Repair Quote!</h2>
+        <p>Fill in the information below for a free quote today!</p>
+
+        <!-- Form to get user details -->
+        <form action="submit-quote.php" method="POST">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <!-- Device model and issue will be pre-filled from previous page hardcoed -->
+            <label for="device">Device</label>
+            <input type="text" id="device" name="device" value="iPhone 12" readonly>
+
+            <label for="issue">Issue</label>
+            <input type="text" id="issue" name="issue" value="Cracked screen" readonly>
+
+            <label for="additional-info">Additional Information</label>
+            <textarea id="additional-info" name="additional-info" rows="4" placeholder="Provide any additional details..."></textarea>
+
+            <button type="submit" class="cta-btn">Get a Quote!</button>
+        </form>
+    </section>
+
     
 
     

@@ -173,3 +173,39 @@ footer {
     color: #2C3E50;              
     font-weight: bold;
 }
+
+label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+button.cta-btn {
+    background-color: #34a853;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button.cta-btn:hover {
+    background-color: #2b8d42;
+}
+
+/* Aligning the form and content */
+section#quote {
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
