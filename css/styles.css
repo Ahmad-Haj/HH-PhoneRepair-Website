@@ -289,7 +289,7 @@ section#quote {
     display: block; 
 }
 
-/* Input and Textarea Styling */
+
 .contact-form input,
 .contact-form textarea {
     width: 100%;
@@ -306,7 +306,6 @@ section#quote {
     height: 150px;
 }
 
-/* Submit Button Styling */
 .contact-form button {
     background-color: #18BC9C; 
     color: white;
@@ -320,15 +319,15 @@ section#quote {
 }
 
 .contact-form button:hover {
-    background-color: #16a085; /
+    background-color: #16a085; 
 }
 
 /* Social Media Icons Section */
 .social-icons {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    margin-top: 30px;
+    gap: 10px;
+    margin-top: 20px;
 }
 
 .social-icons a {
@@ -336,8 +335,14 @@ section#quote {
     color: #333; 
     transition: color 0.3s ease; 
     display: inline-block;
-    width: 40px;
-    height: 40px;
+    width: 12px;
+    height: 12px;
+}
+
+.social-icons img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .social-icons a:hover {
